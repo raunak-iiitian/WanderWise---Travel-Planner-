@@ -1,80 +1,80 @@
-# 🌍 WanderWise: Smart Personalized Travel Planner
+# 🌍 WanderWise: Personalized Travel Planner
 
-> **Plan Smarter, Travel Better.** > A DBMS Group Project by students of PDPM IIITDM Jabalpur.
-
-![Project Status](https://img.shields.io/badge/Status-In%20Development-green)
-![Tech Stack](https://img.shields.io/badge/Stack-Spring%20Boot%20|%20React%20|%20MySQL-blue)
-
-## 📖 Overview
-
-**WanderWise** is not just another itinerary app; it is a **smart travel planner** designed to solve the chaos of trip planning. It integrates sustainability, personalization, and analytics to create seamless travel experiences.
-
-[cite_start]Whether you are a solo backpacker or a group of foodies, WanderWise optimizes your time and budget while keeping you aware of weather conditions and your carbon footprint[cite: 1, 5].
+**WanderWise** is a smart, sustainable, and social travel planning application designed to revolutionize how trips are organized. Developed as a DBMS Group Project at **IIITDM Jabalpur**, it moves beyond simple itinerary generation to offer eco-friendly options, group personalization, and smart context awareness.
 
 ---
 
-## 🚀 Key Features
-
-### 🔑 Core Functionality
-* [cite_start]**Itinerary Generation:** Suggests trips based on budget, duration, and specific interests (nature, adventure, heritage, food, shopping)[cite: 1].
-* [cite_start]**Time Optimization:** Utilizes algorithms to suggest the best routes and timings to maximize sightseeing within a limited timeframe[cite: 1].
-* [cite_start]**Budget Tracking:** detailed breakdown of costs including travel, hotel, food, and activities[cite: 1].
-
-### ✨ Innovations & Unique Selling Points
-* **☁️ Smart Context Awareness:** Suggests itineraries based on **season/weather** at the destination. [cite_start]For example, it avoids monsoon treks or suggests indoor activities during rain[cite: 1, 5].
-* [cite_start]**👥 Group Personalization:** Allows multiple users to add preferences and creates a **merged itinerary** that balances everyone's interests (e.g., balancing the needs of foodies and trekkers)[cite: 5].
-* [cite_start]**🌍 Eco-Travel Mode:** Suggests sustainable travel options (public transport, eco-friendly stays) and displays a **"Carbon Footprint Score"** for each itinerary[cite: 5].
-* [cite_start]**🔗 Community-Driven Add-ons:** Travelers can share their own itineraries (e.g., "Student Budget Goa Trip") for others to reuse, edit, or rate[cite: 5].
+## 📖 Table of Contents
+- [About the Project](#-about-the-project)
+- [Core Features](#-core-features)
+- [Project Modules](#-project-modules)
+- [Tech Stack](#-tech-stack)
+- [Database Schema](#-database-schema)
+- [Contributors](#-contributors)
 
 ---
 
-## 🏗️ System Modules
+## 💡 About the Project
 
-The project is divided into 5 distinct modules to ensure modular development and clear separation of concerns:
+Travel planning is often fragmented across multiple apps for budgeting, routing, and reviews. WanderWise unifies these into a single platform. It uses data-driven insights to suggest itineraries based on budget, duration, and interests (nature, heritage, food, etc.).
 
-1.  [cite_start]**User Module:** Handles authentication, user profiles, and preference management[cite: 2].
-2.  [cite_start]**Destination & Activity Module:** Manages the database of places, activities, costs, and seasonality data[cite: 2].
-3.  [cite_start]**Itinerary Generator Module:** The core logic engine that takes Budget + Time + Preference to output a smart plan[cite: 2].
-4.  [cite_start]**Community/Sharing Module:** Allows users to save, share, and rate itineraries[cite: 2].
-5.  [cite_start]**Admin/Analytics Module:** A dashboard to monitor users, track popular destinations, analyze seasonal trends, and view revenue stats[cite: 2, 5].
+What makes WanderWise unique is its focus on **sustainability** and **context awareness**. The system suggests itineraries based on the season/weather at the destination and calculates a "carbon footprint score" for each trip.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Core Features
 
-* [cite_start]**Backend:** Spring Boot (Java, REST APIs)[cite: 3].
-* [cite_start]**Frontend:** React.js / Angular[cite: 3].
-* [cite_start]**Database:** MySQL / PostgreSQL (Stores destinations, activities, costs, user prefs)[cite: 3].
+### ✅ Smart Planning
+* **Itinerary Generation:** Automates trip suggestions based on user constraints like budget and time.
+* **Time Optimization:** Suggests the best routes and timings to maximize sightseeing.
+* **Smart Context Awareness:** Avoids monsoon treks or suggests indoor activities based on weather data.
+
+### 🌿 Sustainability & Social
+* **Eco-Travel Mode:** Suggests sustainable travel options (public transport, eco-stays) and tracks carbon footprints.
+* **Group Personalization:** Merges preferences from multiple users to create a balanced itinerary that satisfies both "foodies" and "trekkers".
+* **Community Sharing:** Allows users to save, share, and rate itineraries (e.g., "Student Budget Goa Trip").
+
+---
+
+## 📦 Project Modules
+
+The application is divided into 5 distinct modules to ensure modular development and clear separation of concerns:
+
+1.  **User Module:** Handles authentication, user profiles, and preference settings.
+2.  **Destination & Activity Module:** Manages the database of places, activities, associated costs, and seasonality data.
+3.  **Itinerary Generator Module:** The core logic engine that processes Budget + Time + Preference to output a smart plan.
+4.  **Community/Sharing Module:** Facilitates saving, sharing, and rating of itineraries among the user base.
+5.  **Admin/Analytics Module:** A dashboard for monitoring user trends, popular destinations, and average budgets. Useful for tourism boards.
+
+---
+
+## 🛠 Tech Stack
+
+* **Backend:** Spring Boot (Java, REST APIs)
+* **Frontend:** React / Angular
+* **Database:** MySQL / PostgreSQL
 * **External APIs:**
-    * [cite_start]**OpenWeather API:** For real-time weather context[cite: 3].
-    * [cite_start]**Google Maps API:** For travel times and routing[cite: 3].
-* **Tools:** GitHub, Postman, Maven/Gradle.
+    * *OpenWeather API:* For weather-based context awareness.
+    * *Google Maps API:* For travel times and routing.
 
 ---
 
-## 🗄️ Database Design
+## 🗄 Database Schema
 
-The database schema is designed to support complex relationships between users, trips, and itineraries.
+The project utilizes a relational database designed to handle complex relationships between users, trips, and destinations.
 
-### ER Diagram Overview
-The system relies on a relational database containing the following key entities:
-* **User:** Stores login info, roles (User/Admin), and preferences.
-* **Trip:** Represents a planned event with members, start/end dates.
-* **Itinerary:** Connects trips to specific items, calculates total cost, and tracks the carbon footprint score.
-* **Activity/Destination:** Static data regarding places to visit, their costs, and types (Sightseeing, Food, etc.).
-* **Shared_Itinerary_Review:** Handles the community aspect where users rate shared plans.
-
-> *Refer to the `docs/` folder for the full ER Diagram and Schema definitions.*
+**Key Entities:**
+* **User:** Stores login credentials (`password_hash`), roles (User/Admin), and preferences.
+* **Itinerary:** The central entity linking users to their planned trips, including attributes like `carbon_footprint_score` and `total_est_cost`.
+* **ItineraryItem:** Represents specific activities within a trip with start/end times.
+* **Destination & Activity:** Stores static data regarding locations, descriptions, and seasonality.
+* **SharedItineraryReview:** Allows the community to rate and comment on public itineraries.
 
 ---
 
-## 🔮 Future Enhancements
-* [cite_start]**AI/ML Recommendation Engine:** To recommend trips based on past travel history and behavioral preferences[cite: 2].
-* **Payment Gateway Integration:** For direct booking of activities and hotels.
+## 👥 Contributors
 
----
-
-## 👥 Team Members (IIITDMJ)
+**Team Members (IIITDM Jabalpur)**
 
 * **Pratik**
 * **Shraddha**
@@ -83,19 +83,6 @@ The system relies on a relational database containing the following key entities
 
 ---
 
-## ⚙️ How to Run
+### 📝 License
 
-1.  **Clone the repo:**
-    ```bash
-    git clone [https://github.com/your-username/WanderWise.git](https://github.com/your-username/WanderWise.git)
-    ```
-2.  **Backend Setup:**
-    * Navigate to `backend/`.
-    * Configure `application.properties` with your MySQL credentials.
-    * Run `mvn spring-boot:run`.
-3.  **Frontend Setup:**
-    * Navigate to `frontend/`.
-    * Run `npm install`.
-    * Run `npm start`.
-
----
+This project is developed for academic purposes at IIITDMJ.
