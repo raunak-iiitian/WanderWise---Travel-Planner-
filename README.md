@@ -50,12 +50,12 @@ The application is divided into 5 distinct modules to ensure modular development
 
 ## 🛠 Tech Stack
 
-* **Backend:** Spring Boot (Java, REST APIs)
-* **Frontend:** React / Angular
-* **Database:** MySQL / PostgreSQL
+* **Backend:** Express
+* **Frontend:** React 
+* **Database:** MySQL
 * **External APIs:**
     * *OpenWeather API:* For weather-based context awareness.
-    * *Google Maps API:* For travel times and routing.
+   
 
 ---
 
